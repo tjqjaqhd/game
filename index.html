@@ -24,6 +24,14 @@
                     <span class="stat-label">레벨</span>
                     <span class="stat-value" id="level">1</span>
                 </div>
+                <div class="stat-item">
+                    <span class="stat-label">프레스티지</span>
+                    <span class="stat-value" id="prestigeLevel">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">스킬 포인트</span>
+                    <span class="stat-value" id="skillPoints">0</span>
+                </div>
             </div>
         </header>
 
@@ -46,6 +54,33 @@
                 </div>
             </div>
 
+            <!-- Daily Challenge Section -->
+            <div class="daily-challenge-section">
+                <h2>🎯 일일 도전</h2>
+                <div id="dailyChallengeContainer"></div>
+            </div>
+
+            <!-- Prestige Section -->
+            <div class="prestige-section">
+                <h2>🌟 프레스티지 시스템</h2>
+                <div class="prestige-info">
+                    <div class="prestige-stats">
+                        <span>프레스티지 레벨: <span id="prestigeLevel">0</span></span>
+                        <span>프레스티지 포인트: <span id="prestigePoints">0</span></span>
+                    </div>
+                    <button class="prestige-button" id="prestigeButton">🔒 프레스티지 (레벨 50 필요)</button>
+                </div>
+            </div>
+
+            <!-- Skill Tree Section -->
+            <div class="skill-section">
+                <h2>🎭 스킬 트리</h2>
+                <div class="skill-info">
+                    <span>사용 가능한 스킬 포인트: <span id="skillPoints">0</span></span>
+                </div>
+                <div class="skill-grid" id="skillTreeGrid"></div>
+            </div>
+
             <div class="shop-section">
                 <h2>🏪 업그레이드 상점</h2>
                 <div class="shop-grid" id="shopGrid">
@@ -58,6 +93,12 @@
                 <div class="achievements-grid" id="achievementsGrid">
                     <!-- 업적들이 여기에 동적으로 추가됩니다 -->
                 </div>
+            </div>
+
+            <!-- Statistics Section -->
+            <div class="statistics-section">
+                <h2>📊 통계</h2>
+                <div id="statisticsContainer"></div>
             </div>
         </main>
 

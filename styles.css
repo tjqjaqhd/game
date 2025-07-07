@@ -448,6 +448,311 @@ body {
         font-size: 1.8em;
     }
     
+    .skill-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .statistics-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .prestige-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .challenge-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+/* Daily Challenge Styles */
+.daily-challenge-section {
+    margin-bottom: 30px;
+    grid-column: 1 / -1;
+}
+
+.daily-challenge {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+}
+
+.daily-challenge.completed {
+    border-color: #00ff88;
+    background: rgba(0, 255, 136, 0.1);
+}
+
+.challenge-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.challenge-name {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #ffd700;
+}
+
+.challenge-reward {
+    background: rgba(255, 215, 0, 0.3);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.challenge-description {
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.challenge-progress {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.challenge-progress .progress-bar {
+    flex: 1;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.challenge-progress .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #00ff88, #00ccff);
+    transition: width 0.3s ease;
+}
+
+.challenge-streak {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #00ff88;
+    font-weight: 600;
+}
+
+/* Prestige Styles */
+.prestige-section {
+    margin-bottom: 30px;
+    grid-column: 1 / -1;
+}
+
+.prestige-info {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    text-align: center;
+}
+
+.prestige-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.prestige-stats span {
+    background: rgba(255, 215, 0, 0.2);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    color: #ffd700;
+}
+
+.prestige-button {
+    background: linear-gradient(45deg, #ffd700, #ffeb3b);
+    border: none;
+    border-radius: 25px;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+.prestige-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+}
+
+.prestige-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Skill Tree Styles */
+.skill-section {
+    margin-bottom: 30px;
+    grid-column: 1 / -1;
+}
+
+.skill-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skill-info span {
+    background: rgba(138, 43, 226, 0.3);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    color: #da70d6;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.skill-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    border-color: rgba(138, 43, 226, 0.5);
+    background: rgba(138, 43, 226, 0.1);
+}
+
+.skill-item.available {
+    border-color: rgba(138, 43, 226, 0.6);
+    background: rgba(138, 43, 226, 0.15);
+}
+
+.skill-item.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.skill-name {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #da70d6;
+}
+
+.skill-level {
+    background: rgba(138, 43, 226, 0.3);
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.skill-description {
+    margin-bottom: 10px;
+    opacity: 0.9;
+    font-size: 0.9em;
+}
+
+.skill-cost {
+    color: #da70d6;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+/* Statistics Styles */
+.statistics-section {
+    margin-bottom: 30px;
+    grid-column: 1 / -1;
+}
+
+.statistics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.statistics-grid .stat-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.statistics-grid .stat-label {
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.statistics-grid .stat-value {
+    font-weight: 700;
+    color: #00ff88;
+}
+
+/* Enhanced Visual Effects */
+.mine-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.mine-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s ease;
+}
+
+.mine-button:hover::before {
+    left: 100%;
+}
+
+/* Particle Effects */
+@keyframes sparkle {
+    0% {
+        transform: scale(0) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1) rotate(180deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(0) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.sparkle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #ffd700;
+    border-radius: 50%;
+    animation: sparkle 1s ease-out forwards;
+}
     .mine-button {
         width: 150px;
         height: 150px;
