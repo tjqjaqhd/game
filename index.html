@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Miner Tycoon - 최고의 채굴 게임</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <header class="header">
+            <h1 class="title">💰 CRYPTO MINER TYCOON</h1>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-label">코인</span>
+                    <span class="stat-value" id="coins">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">초당 수익</span>
+                    <span class="stat-value" id="coinsPerSecond">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">레벨</span>
+                    <span class="stat-value" id="level">1</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-game">
+            <div class="mining-section">
+                <div class="mining-area">
+                    <button class="mine-button" id="mineButton">
+                        <div class="mine-icon">⛏️</div>
+                        <div class="mine-text">채굴하기!</div>
+                        <div class="mine-reward">+<span id="clickReward">1</span> 코인</div>
+                    </button>
+                    <div class="mining-effects" id="miningEffects"></div>
+                </div>
+                
+                <div class="progress-section">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                        <span class="progress-text">레벨 업까지: <span id="progressText">0/100</span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shop-section">
+                <h2>🏪 업그레이드 상점</h2>
+                <div class="shop-grid" id="shopGrid">
+                    <!-- 업그레이드 아이템들이 여기에 동적으로 추가됩니다 -->
+                </div>
+            </div>
+
+            <div class="achievements-section">
+                <h2>🏆 업적</h2>
+                <div class="achievements-grid" id="achievementsGrid">
+                    <!-- 업적들이 여기에 동적으로 추가됩니다 -->
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <button class="save-button" id="saveButton">💾 저장</button>
+            <button class="load-button" id="loadButton">📂 불러오기</button>
+            <button class="reset-button" id="resetButton">🔄 리셋</button>
+        </footer>
+
+        <!-- 광고 배너 영역 -->
+        <div class="ad-banner" id="adBanner">
+            <div class="ad-content">
+                <span>🎯 광고 시청으로 2배 보너스! </span>
+                <button class="ad-button" id="adButton">광고 보기</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 알림 시스템 -->
+    <div class="notification-container" id="notificationContainer"></div>
+
+    <script src="game.js"></script>
+</body>
+</html>
